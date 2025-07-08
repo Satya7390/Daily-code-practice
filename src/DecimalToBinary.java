@@ -38,7 +38,7 @@ public class DecimalToBinary {
 		System.out.println("\nWelocmes to the Converter of Binary To Decimal!!\n");
 
 		System.out.print("Please enter your Binary Number : ");
-		String num = sc.next();
+		// int num = sc.next();
 //		int n = num;
 
 //		int dec = 0, pow = 0, rem;
@@ -54,9 +54,10 @@ public class DecimalToBinary {
 //		
 		// ==========In Built-in function =========================//
 
+		String num = sc.next();
+
 		int dec = Integer.parseInt(num, 2); // convert binary to decimal
-		System.out.print(dec); 
-//		System.out.print(dec);
+		System.out.print(dec);
 
 	}
 }

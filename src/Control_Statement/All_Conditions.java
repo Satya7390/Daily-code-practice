@@ -9,12 +9,16 @@ public class All_Conditions {
 //		IfChecks(); 
 //		EvenOdd();
 //		GreatesNumbers();
-
 //		System.out.print(Add_of_Two_Numbers(5,6));
 //		Print_Table();
 //		LastDigit();
 //		CalGrade();
 		Days();
+//		AdditionUpToN();
+//		FactNum();
+//		Internet_Speed();
+//		GCD_OF_Two_Num();
+//		PrimeNum();
 
 	}
 
@@ -196,6 +200,42 @@ public class All_Conditions {
 		}
 	}
 
+//	public static void Days() {
+//		Scanner sc = new Scanner(System.in);
+//
+//		System.out.println("\nWelcomes to Find Days!\n");
+//
+//		System.out.print("Enter your number of Days:  ");
+//		int dy = sc.nextInt();
+//
+//		switch (dy) {
+//		case 1:
+//			System.out.print("Day is Monday");
+//			break;
+//		case 2:
+//			System.out.print("Day is Tuesday");
+//			break;
+//		case 3:
+//			System.out.print("Day is Wednesday");
+//			break;
+//		case 4:
+//			System.out.print("Day is Thursday");
+//			break;
+//		case 5:
+//			System.out.print("Day is Friday");
+//			break;
+//		case 6:
+//			System.out.print("Day is Saturday");
+//			break;
+//		case 7:
+//			System.out.print("Day is Sunday");
+//			break;
+//		default:
+//			System.err.println("Please Enter Number Between 1 to 7 !!");
+//		}
+//
+//	}
+
 	public static void Days() {
 		Scanner sc = new Scanner(System.in);
 
@@ -204,21 +244,162 @@ public class All_Conditions {
 		System.out.print("Enter your number of Days:  ");
 		int dy = sc.nextInt();
 
-		switch (dy) {
-		case 1:
-			System.out.print("Day is Monday");
-		case 2:
-			System.out.print("Day is Tuesday");
-		case 3:
-			System.out.print("Day is Wednesday");
-		case 4:
-			System.out.print("Day is Thursday");
-		case 5:
-			System.out.print("Day is Friday");
-		case 6:
-			System.out.print("Day is Saturday");
-		default:
-			System.out.print("Day is Sunday");
+		String Days = switch (dy) {
+		case 1 -> " Day is Monday";
+		case 2 -> " Day is Tuesday";
+		case 3 -> " Day is Wednesday";
+		case 4 -> " Day is Thursday";
+		case 5 -> " Day is Friday";
+		case 6 -> " Day is Saturday";
+		case 7 -> " Day is Sunday";
+		default -> "Please Enter Number Between 1 to 7 !!";
+//		case 2:
+//			System.out.print("Day is Tuesday");
+//			break;
+//		case 3:
+//			System.out.print("Day is Wednesday");
+//			break;
+//		case 4:
+//			System.out.print("Day is Thursday");
+//			break;
+//		case 5:
+//			System.out.print("Day is Friday");
+//			break;
+//		case 6:
+//			System.out.print("Day is Saturday");
+//			break;
+//		case 7:
+//			System.out.print("Day is Sunday");
+//			break;
+//		default:
+//			System.err.println("Please Enter Number Between 1 to 7 !!");
+		};
+		System.out.print(Days);
+
+	}
+
+	public static void AdditionUpToN() {
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("\nWelcomes to Additions till the Last Digit!!\n");
+
+		System.out.print("Enter your first number: ");
+		int num1 = sc.nextInt();
+		System.out.print("Enter your second number: ");
+		int num2 = sc.nextInt();
+
+		int sum = 0;
+
+		for (int i = num1; i <= num2; i++) { // 1<=1 true....11<10 false
+			sum += i;
+
+//			System.out.print(" " + sum);
+
+		}
+
+		System.out.print("Sum is: " + sum);
+
+	}
+
+	public static void FactNum() {
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("\nWelcomes to Find Factorial!!\n");
+
+		System.out.print("Enter your number which you wants to find factorial: ");
+		int num = sc.nextInt();
+
+		int fact = 1;
+
+		if (num > 0) {
+//			System.out.println("Your number is +ve");
+			if (num % 2 == 0) {
+
+				for (int i = 1; i <= num; i++) {
+					fact *= i;
+				}
+				System.out.println("Factorial of " + num + " is " + fact);
+			} else
+				System.out.println("Your number is Odd");
+
+		} else if (num < 0) {
+			System.out.println("Your number is -ve");
+		} else
+			System.out.println("Your number is Zero");
+
+	}
+
+	public static void Internet_Speed() {
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("\nWelcomes to the Space of Speed Meter!!\n");
+
+		System.out.print("Enter your Internet Speed in MB/Sec to know the Speed Quality : ");
+		int sp = sc.nextInt();
+
+		if (sp < 5) {
+			System.out.println("Speed is Very Slow!!");
+		} else if (sp < 10) {
+			System.out.println("Speed is Slow!!");
+		} else if (sp < 30) {
+			System.out.println("Speed is Average!!");
+		} else if (sp < 50) {
+			System.out.println("Speed is Fast!!");
+		} else {
+			System.out.println("Speed is Very Fast!!");
+		}
+
+	}
+
+	public static void GCD_OF_Two_Num() {
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("\nWelocomes to Find the GCD of Two Numbers!!\n");
+
+		System.out.print("Enter your First Number: ");
+		int num = sc.nextInt();
+		System.out.print("Enter your Second Number: ");
+		int num1 = sc.nextInt();
+
+		int min = num;
+		if (num1 < num) {
+			min = num1;
+		}
+//		System.out.print(min);
+
+		for (int i = min; i >= 1; i--) {
+
+			if (num % i == 0 && num1 % i == 0) {
+				System.out.print(" GCD is : " + i);
+				break;
+			}
+
 		}
 	}
+
+	public static void PrimeNum() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("\nWelocomes to Find the Prime Number!!\n");
+
+		System.out.print("Enter your Number: ");
+		int num = sc.nextInt();
+
+		if (num <= 1)
+			System.err.print("\nPlease Enter valid Numbers!!\n");
+		int count = 0;
+
+		for (int i = 2; i < num; i++) { // Also we can use this short-cuts for (int i = 2; i < Math.sqrt(num); i++) //
+										// for (int i = 2; i < num/2; i++)
+			if (num % 2 == 0) {
+				count++;
+			}
+		}
+		if (count == 0)
+			System.out.println("Number is Prime!!");
+		else
+			System.out.println("Number isn't Prime!!");
+	}
+
 }

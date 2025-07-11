@@ -18,7 +18,7 @@ public class All_Conditions {
 //		FactNum();
 //		Internet_Speed();
 //		GCD_OF_Two_Num();
-		PrimeNum();
+//		PrimeNum();
 //		DigitCount();
 //		DivBility();
 //		UperLower();

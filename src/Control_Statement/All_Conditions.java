@@ -13,12 +13,21 @@ public class All_Conditions {
 //		Print_Table();
 //		LastDigit();
 //		CalGrade();
-		Days();
+//		Days();
 //		AdditionUpToN();
 //		FactNum();
 //		Internet_Speed();
 //		GCD_OF_Two_Num();
-//		PrimeNum();
+		PrimeNum();
+//		DigitCount();
+//		DivBility();
+//		UperLower();
+//		AgeGroup();
+//		SaleTarget();
+//		PrintPrime(); 
+//		EvenOddSum();
+//		NestedLoops();
+//		NestedEvenOdd();
 
 	}
 
@@ -384,22 +393,265 @@ public class All_Conditions {
 		System.out.println("\nWelocomes to Find the Prime Number!!\n");
 
 		System.out.print("Enter your Number: ");
+		int num1 = sc.nextInt();
+		System.out.print("Enter your Number: ");
+		int num2 = sc.nextInt();
+
+//		if (num <= 1)
+//			System.err.print("\nPlease Enter valid Numbers!!\n");
+		int primeCount = 0;
+
+		if (num1 <= 1) {
+			System.err.print("Your First Number should be Greater Than 1 ");
+		} else {
+			System.out.println("\n Here is your Prime Number!!");
+			for (int j = num1; j < num2; j++) {
+				int count = 0;
+
+				for (int i = 2; i < j; i++) { // Also we can use this short-cuts for (int i = 2; i <= Math.sqrt(num);
+												// i++)
+												// //
+												// for (int i = 2; i < num/2; i++)
+					if (j % i == 0) {
+						count++;
+					}
+				}
+				if (count == 0) {
+					primeCount += 1;
+					System.out.print(" " + j);
+				}
+			}
+			System.out.println();
+			System.out.print("Total prime numbers is : " + primeCount);
+		}
+
+//		else
+//			System.out.println("Number isn't Prime!!");
+	}
+
+	public static void DigitCount() {
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("\nWelocomes to Find Digit in Numbers!!\n");
+
+		System.out.print("Enter your Number: ");
 		int num = sc.nextInt();
 
-		if (num <= 1)
-			System.err.print("\nPlease Enter valid Numbers!!\n");
 		int count = 0;
+		while (num > 0) {
+			int last = num % 10;
+			count++;
+//			System.out.print(count);
+			num /= 10;
+		}
+		System.out.print("Your total Digit Count is: " + count);
+	}
 
-		for (int i = 2; i < num; i++) { // Also we can use this short-cuts for (int i = 2; i < Math.sqrt(num); i++) //
-										// for (int i = 2; i < num/2; i++)
-			if (num % 2 == 0) {
-				count++;
+	public static void DivBility() {
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("\nWelocomes to Find Divisibility BY 5 & 10\n");
+
+		System.out.print("Enter your Number: ");
+		int num = sc.nextInt();
+
+		if (num % 5 == 0 && num % 10 == 0)
+			System.out.println("Divisible");
+		else
+			System.out.print("Not Divisible");
+
+	}
+
+	public static void UperLower() {
+
+//		'A' to 'Z' in ASCII: 65 to 90
+//
+//		'a' to 'z' in ASCII: 97 to 122
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("\nWelocomes to Find Uper & Lower Case \n");
+
+		System.out.print("Enter your Sentences: ");
+		char ch = sc.next().charAt(0);
+
+		if (ch >= 65 && ch <= 90)
+			System.out.print("Upercase ");
+		else if (ch >= 97 && ch <= 122)
+			System.out.print("Lowercase ");
+		else
+			System.out.print("Invalid");
+
+	}
+
+	public static void AgeGroup() {
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("\nWelocomes to Find Your Age Group!!\n");
+
+		System.out.print("Enter Your Age: ");
+		int age = sc.nextInt();
+
+		if (age <= 12)
+			System.out.println("Child");
+		else if (age <= 18)
+			System.out.println("Teenager");
+		else if (age <= 60)
+			System.out.println("Adult");
+		else
+			System.out.println("Senior");
+
+	}
+
+	public static void SaleTarget() {
+
+//		Scanner sc = new Scanner(System.in);
+//		System.out.println("\nWelocomes to Find Your Target Status!!\n");
+//
+//		System.out.print("Enter Your Sales Price: ");
+//		int sl = sc.nextInt();
+//		System.out.print("Now, Enter Your Target Price: ");
+//		int tg = sc.nextInt();
+//
+//		if (sl >= tg)
+//			System.out.println("Tagrget Achieved!!");
+//		else
+//			System.out.println("Tagrget Not Achieved Yet!!");
+//
+//	}
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("Enter Salutation : ");
+
+		String Salutation = sc.nextLine();
+
+		if (Salutation.equals("Mr"))
+			System.out.println("Hello Sir!!");
+		else if (Salutation.equals("Mrs"))
+			System.out.println("Hello Ma'am!!");
+		else
+			System.out.println("Invalid Input");
+
+	}
+
+	public static void PrintPrime() {
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("\nWelcome to printing the prime Numbers!!\n");
+
+		System.out.print("Enter your two numbers which you wants to print Prime In Between : ");
+
+		int num1 = sc.nextInt();
+		int num2 = sc.nextInt();
+
+		for (int j = num1; j <= num2; j++) {
+			int count = 0;
+
+			for (int i = 1; i <= j; i++) {
+				if (j % i == 0) {
+					count++;
+				}
+			}
+			if (count == 2) {
+				System.out.println(j);
+			}
+			// else {
+//				System.out.println("Not prime");
+//			}
+		}
+
+	}
+
+	public static void EvenOddSum() {
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("\nWelcome to Sum of Even & Odd!!\n");
+
+		System.out.print("Enter two numbers : ");
+		int num1 = sc.nextInt();
+		int num2 = sc.nextInt();
+
+		int sum1 = 0;
+		int sum2 = 0;
+
+		for (int i = num1; i <= num2; i++) {
+
+			if (i % 2 == 0) {
+				sum1 += i;
+//				System.out.println(i);
+
+			} else {
+				sum2 += i;
+//				System.out.println(i);
+			}
+
+		}
+
+		System.out.println("Even sum is: " + sum1);
+		System.out.println("Odd sum is: " + sum2);
+
+	}
+
+	public static void NestedLoops() {
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("\nWelcome in The Nested if else Loops!!\n");
+
+		System.out.print("Enter your Three numbers to find Greatest : ");
+
+		int num1 = sc.nextInt();
+		int num2 = sc.nextInt();
+		int num3 = sc.nextInt();
+
+		if (num1 > num2) {
+			if (num1 > num3) {
+				System.out.println(num1 + " is Greatest");
+
+			} else {
+				System.out.println(num3 + " is Graeter ");
+
+			}
+
+		} else {
+			if (num2 > num3) {
+				System.out.println(num2 + " is Gretest");
+
+			} else {
+				System.out.println(num3 + " is Greatest");
 			}
 		}
-		if (count == 0)
-			System.out.println("Number is Prime!!");
-		else
-			System.out.println("Number isn't Prime!!");
+
+	}
+
+	public static void NestedEvenOdd() {
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("\nWelcome in The Nested if else Loops to find +-Ve Even & Odd!!\n");
+
+		System.out.print("Enter your Number : ");
+
+		int num = sc.nextInt();
+
+		if (num > 0) {
+
+			if (num % 2 == 0) {
+				System.out.println("+ve Even");
+			} else
+				System.out.println("+ve Odd");
+
+		} else {
+			if (num < 0) {
+				if (num % 2 == 0) {
+					System.out.println("-ve Even");
+				} else
+					System.out.println("-v Odd");
+			} else
+				System.out.println("Zero");
+		}
+
 	}
 
 }

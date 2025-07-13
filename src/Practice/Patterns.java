@@ -11,7 +11,8 @@ public class Patterns {
 //		Pattern_5();
 //		Pattern_6();
 //		Pattern_7();
-		Pattern_8();
+//		Pattern_8();
+		Pattern_9();
 
 	}
 
@@ -140,7 +141,7 @@ public class Patterns {
 //	3333333
 //	22222222
 //	111111111
-	
+
 	public static void Pattern_8() {
 
 		for (int i = 1; i <= 9; i++) {
@@ -150,7 +151,7 @@ public class Patterns {
 			System.out.println();
 		}
 	}
-	
+
 //	1
 //	22
 //	333
@@ -160,5 +161,24 @@ public class Patterns {
 //	7777777
 //	88888888
 //	999999999
+
+	public static void Pattern_9() {
+
+		for (int i = 1; i <= 5; i++) {
+			for (int j = (5 - i); j >= 1; j--) {
+				System.out.print(" ");
+			}
+			for (int k = 5; k >= 1; k--) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+
+//    *****
+//   ***** 
+//  *****  
+// *****   
+//*****    
 
 }

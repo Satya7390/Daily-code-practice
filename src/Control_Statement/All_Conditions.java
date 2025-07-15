@@ -28,6 +28,12 @@ public class All_Conditions {
 //		EvenOddSum();
 //		NestedLoops();
 //		NestedEvenOdd();
+//		TablesInWhile();
+//		RevTablesInWhile();
+//		SumInWhile();
+//		RevInWhile();
+//		DayInSwitch();
+		CharInSwitch();
 
 	}
 
@@ -651,6 +657,95 @@ public class All_Conditions {
 			} else
 				System.out.println("Zero");
 		}
+
+	}
+
+	public static void TablesInWhile() {
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Enter number to print table");
+		int num = sc.nextInt();
+		int i = 1;
+
+		while (i <= 10) {
+			System.out.println(num + " x " + i + " = " + (num * i));
+			i++;
+		}
+	}
+
+	public static void RevTablesInWhile() {
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("Table in While Loop");
+		int i = 10;
+
+		while (i >= 1) {
+			System.out.println(i);
+			i--;
+		}
+	}
+
+	public static void SumInWhile() {
+
+		int sum = 0, num = 1;
+		while (num <= 10) {
+			sum += num;
+			num++;
+		}
+		System.out.println("Sum is: " + sum);
+	}
+
+	public static void RevInWhile() {
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("Enter Number to Convert in Reverse Order : ");
+		int num = sc.nextInt();
+		int n = num;
+
+		int rem, rev = 0;
+		while (num > 0) {
+			rem = num % 10;
+			rev = rev * 10 + rem; // 0 + 3 = 3 -> 3*10 + 2 = 32 -> 32*10+1 = 321
+			num /= 10;
+		}
+		System.out.println("Reverse of " + n + " is: " + rev);
+	}
+
+	public static void DayInSwitch() {
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("Enter Number Beteween 1 to 7 to Print Day: ");
+		int num = sc.nextInt();
+
+		String n = switch (num) {
+		case 1 -> "Monday";
+		case 2 -> "Tuesday";
+		case 3 -> "Wednesday";
+		case 4 -> "Thursday";
+		case 5 -> "Friday";
+		case 6 -> "Saturday";
+		case 7 -> "Sunday";
+		default -> "Enter Valid Input";
+
+		};
+
+		System.out.println(n);
+
+	}
+
+	public static void CharInSwitch() {
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("Enter any character to check Vowel: ");
+		char ch = sc.next().charAt(0);
+
+		String n = switch (ch) {
+		case 'A', 'E', 'I', 'O', 'U', 'a', 'e', 'i', 'o', 'u' -> "Vowel";
+		default -> "Not a Vowel";
+
+		};
+
+		System.out.println(n);
 
 	}
 

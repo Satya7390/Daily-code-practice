@@ -4,11 +4,21 @@ public class Hello {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		System.out.println("Hii Satya!!");
-		Scanner sc = new Scanner(System.in);
-		System.err.print("Enter number : ");
-		int x = sc.nextInt();
-		System.out.print("Number is : "+x);
-	}
+		
+		//Loop41
+		int num=2;
+//		myCode(num);
 
+		//EndOfMainMethod
+//		private static void myCode(int num)
+
+		int i = 0;
+		while (i < 5) {
+
+		num += (++i * i + Math.pow(i, 2));
+		System.out.println(num);
+
+		}
+	
+	}
 }

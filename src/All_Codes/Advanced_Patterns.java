@@ -47,13 +47,13 @@ public class Advanced_Patterns {
 
 	public static void Inverted_half_pyramid_num(int row, int col) {
 		for (int i = 1; i <= row; i++) {
-			for (int j = 1; j <= ((col - i) + 1); j++) {
+			for (int j = 1; j <= ((col-i) +1); j++) {
 				System.out.print(j);
 			}
 			System.out.println();
 		}
 	}
-
+	
 //	12345
 //	1234
 //	123

@@ -16,7 +16,11 @@ public class Patterns {
 //		pattern_1(row, col);
 //		pattern_2(row, col);
 //		pattern_3(row, col);
-		pattern_4(row, col);
+//		pattern_4(row, col);
+//		pattern_5(row, col);
+//		pattern_6(row, col);
+//		pattern_7(row, col);
+		pattern_8(row, col);
 
 	}
 
@@ -74,7 +78,7 @@ public class Patterns {
 //	* * * 
 //	* * 
 //	*
-	
+
 	public static void pattern_4(int a, int b) {
 
 		for (int i = 1; i <= a; i++) {
@@ -84,13 +88,13 @@ public class Patterns {
 			System.out.println();
 		}
 		for (int i = 1; i <= a; i++) {
-			for (int j = (b-1); j >= i; j--) {
+			for (int j = (b - 1); j >= i; j--) {
 				System.out.print("* ");
 			}
 			System.out.println();
 		}
 	}
-	
+
 //	* 
 //	* * 
 //	* * * 
@@ -103,5 +107,107 @@ public class Patterns {
 //	* * 
 //	* 
 
+	public static void pattern_5(int a, int b) {
+		for (int i = 1; i <= a; i++) {
+			for (int j = (a - i); j >= 1; j--) {
+				System.out.print(" ");
+			}
+			for (int k = 1; k <= i; k++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+
+	}
+
+//    *
+//   **
+//  ***
+// ****
+//*****
+
+	public static void pattern_6(int a, int b) {
+		for (int i = 1; i <= a; i++) {
+			for (int j = 1; j <= (i - 1); j++) {
+				System.out.print(" ");
+			}
+			for (int k = b; k >= i; k--) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+
+	}
+//	
+//	*****
+//	 ****
+//	  ***
+//	   **
+//	    *
+
+	public static void pattern_7(int a, int b) {
+		for (int i = 1; i <= a; i++) {
+			for (int j = (a - i); j >= 1; j--) {
+				System.out.print(" ");
+			}
+			for (int k = 1; k <= i; k++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+		for (int i = 1; i <= a; i++) {
+			for (int j = 1; j <= i; j++) {
+				System.out.print(" ");
+			}
+			for (int k = (b - 1); k >= i; k--) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+	}
+//	
+//    *
+//   **
+//  ***
+// ****
+//*****
+// ****
+//  ***
+//   **
+//    *
+
+	public static void pattern_8(int a, int b) {
+		for (int i = 1; i <= a; i++) {
+			for (int j = (b - i); j >= 1; j--) {
+				System.out.print(" ");
+			}
+			for (int k = 1; k <= i; k++) {
+				System.out.print("* ");
+			}
+			System.out.println();
+		}
+
+		for (int i = 1; i <= a; i++) {
+			for (int j = (i + 1 - 1); j >= 1; j--) {
+				System.out.print(" ");
+			}
+			for (int k = (a - i); k >= 1; k--) {
+				System.out.print("* ");
+			}
+			System.out.println();
+		}
+
+	}
+	
+//    * 
+//   * * 
+//  * * * 
+// * * * * 
+//* * * * * 
+// * * * * 
+//  * * * 
+//   * * 
+//    * 
+     
 
 }

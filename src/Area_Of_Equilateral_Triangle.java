@@ -11,14 +11,15 @@ public class Area_Of_Equilateral_Triangle {
 
 		Scanner sc = new Scanner(System.in);
 
-		System.out.println("\nWelcome to the Find  Area Of Equilateral Triangle!!\n");
-
-		System.out.print("Enter your side length : ");
-		int a = sc.nextInt();
-
-		float ar = (1.732f * (a * a) / 4);
-
-		System.out.print("Your Area Of Equilateral Triangle is : " + ar);
+//		System.out.println("\nWelcome to the Find  Area Of Equilateral Triangle!!\n");
+//
+//		System.out.print("Enter your side length : ");
+//		int a = sc.nextInt();
+//
+//		float ar = (1.732f * (a * a) / 4);
+//
+//		System.out.print("Your Area Of Equilateral Triangle is : " + ar);
+		System.out.print("1"+2+3+4);
 	}
 
 }

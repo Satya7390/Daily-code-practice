@@ -1,13 +1,14 @@
 package OOPs;
 
 class A {
-	A() {
+	A(int n) {
 		System.out.println("A");
 	}
 }
 
 class B extends A {
-	B() {
+	 B() {
+		super(4);
 		System.out.println("B");
 	}
 }
@@ -22,6 +23,7 @@ public class Inheritances {
 	public static void main(String[] args) {
 
 		B b1 = new B();
+//		b1.A();
 	}
 
 }

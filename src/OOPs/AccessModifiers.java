@@ -6,6 +6,11 @@ public class AccessModifiers {
 	private String pass = "Satya@5365";
 	protected int pin = 321;
 	String city = "Pune"; // default
+	String name1;
+
+	public void setName(String n) {
+		name1 = n;
+	}
 
 	public void Pub() {
 		System.out.println("This is public");
@@ -37,7 +42,8 @@ public class AccessModifiers {
 	public static void main(String[] args) {
 		AccessModifiers ac = new AccessModifiers();
 		ac.Demo();
-		
+		ac.setName("Satya");
+		System.out.print("Hii " + ac.name1);
 
 	}
 

@@ -39,7 +39,8 @@ public class Patterns {
 //		pattern_21(n);
 //		pattern_22(n);
 //		pattern_23();
-		pattern_24(n);
+//		pattern_24(n);
+		pattern_25(n);
 
 	}
 
@@ -539,5 +540,42 @@ public class Patterns {
 			System.out.println();
 		}
 	}
+
+//	A 
+//	B B 
+//	C C C 
+//	D D D D 
+//	E E E E E 
+//	D D D D 
+//	C C C 
+//	B B 
+//	A 
+
+	public static void pattern_25(int n) {
+
+		for (int i = 1; i <= n; i++) {
+			char ch = 'A';
+			for (int j = 1; j <= i; j++) {
+
+				System.out.print(ch);
+				ch++;
+
+			}
+
+			ch -= 2;
+			for (int j = 1; j < i; j++) {
+				System.out.print(ch);
+				ch--;
+			}
+
+			System.out.println();
+		}
+
+	}
+	
+//	A
+//	ABA
+//	ABCBA
+//	ABCDCBA
 
 }

@@ -30,7 +30,7 @@ public class All_Conditions {
 //		NestedEvenOdd();
 //		TablesInWhile();
 //		RevTablesInWhile();
-//		SumInWhile();
+		SumInWhile();
 //		RevInWhile();
 //		DayInSwitch();
 		CharInSwitch();

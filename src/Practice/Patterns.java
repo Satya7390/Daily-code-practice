@@ -14,7 +14,10 @@ public class Patterns {
 //		Pattern_8();
 //		Pattern_9();
 //		Pattern_10();
-		Pattern_11();
+//		Pattern_11();
+//		Pattern_12();
+//		Pattern_13();
+		Pattern_14();
 
 	}
 
@@ -224,7 +227,7 @@ public class Patterns {
 		}
 	}
 
-	//  1
+	// 1
 	// 1 2
 	// 1 2 3
 	// 1 2 3 4
@@ -234,4 +237,88 @@ public class Patterns {
 	// 1 2 3 4 5 6 7 8
 	// 1 2 3 4 5 6 7 8 9
 
+	// ================23rd September=============
+
+//	lms pattern 16
+	public static void Pattern_12() {
+
+		for (int i = 1; i <= 6; i++) {
+			char ch = 'A';
+			for (int j = i; j <= 6; j++) {
+				System.out.print(ch);
+				ch++;
+			}
+			System.out.println();
+		}
+
+	}
+
+//	ABCDEF
+//	ABCDE
+//	ABCD
+//	ABC
+//	AB
+//	A
+
+//	lms pattern 22
+
+	public static void Pattern_13() {
+
+		for (int i = 1; i <= 6; i++) {
+			// for space
+			for (int j = 1; j <= (i - 1); j++) {
+				System.out.print(" ");
+			}
+			for (int k = 1; k <= 5; k++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+
+//		*****    
+//		 *****   
+//		  *****  
+//		   ***** 
+//		    *****
+
+	}
+
+//	lms pattern 16
+
+	public static void Pattern_14() {
+
+		for (int i = 9; i >= 1; i--) {
+			// for space
+			for (int j = 1; j <= (9 - i); j++) {
+				System.out.print(" ");
+			}
+			for (int k = 1; k <= (2 * i - 1); k++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+
+		// second half
+		for (int i = 2; i <= 9; i++) {
+			// for space
+			for (int j = 1; j <= (9 - i); j++) {
+				System.out.print(" ");
+			}
+			for (int k = 1; k <= (2 * i - 1); k++) {
+				System.out.print("*");
+			}
+			System.out.println();
+		}
+
+//	*********
+//	 ******* 
+//	  *****  
+//	   ***   
+//	    *    
+//	   ***   
+//	  *****  
+//	 ******* 
+//	*********
+
+	}
 }

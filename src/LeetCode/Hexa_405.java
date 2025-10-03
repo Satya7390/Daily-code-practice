@@ -1,11 +1,13 @@
 package LeetCode;
 
 public class Hexa_405 {
+	
+	// pending to understood 
 
 	public static void main(String[] args) {
 //		toHex(30);
 
-		System.out.println(toHex(-1));
+		System.out.println(toHex(26));
 
 	}
 
